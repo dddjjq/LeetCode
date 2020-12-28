@@ -3,8 +3,8 @@ package com.welson;
 public class Main {
 
     public static void main(String[] args) {
-        Q15 q4 = new Q15();
-        int[] arr = new int[]{0,0,0,0,0,0};
-        System.out.println(q4.threeSum(arr));
+        Q16 q4 = new Q16();
+        int[] arr = new int[]{0,0,0,0,0,2,1};
+        System.out.println(q4.threeSumClosest(arr,1));
     }
 }
