@@ -3,9 +3,8 @@ package com.welson;
 public class Main {
 
     public static void main(String[] args) {
-        Q29 q23 = new Q29();
-        ListNode listNode = createListNode();
-        System.out.println(q23.divide(Integer.MIN_VALUE,2));
+        Q38 q38 = new Q38();
+        System.out.println(q38.countAndSay(5));
     }
 
     public static ListNode createListNode() {
