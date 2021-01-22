@@ -1,7 +1,5 @@
 package com.welson.part2;
 
-import java.util.Arrays;
-
 public class Q43 {
     public String multiply(String num1, String num2) {
         if (num1.equals("0") || num2.equals("0")) {
@@ -34,9 +32,9 @@ public class Q43 {
         for (int i = length - 1; i >= 0; i--) {
             int temp = 0;
             if (isLeft) {
-                temp = chars2[i] + chars1[i + maxLength - length] + flag - '0' - '0';
+                temp = chars2[i] - '0' + chars1[i + maxLength - length] - '0' + flag;
             } else {
-                temp = chars1[i] + chars2[i + maxLength - length] + flag - '0' - '0';
+                temp = chars1[i] - '0' + chars2[i + maxLength - length] - '0' + flag;
             }
             flag = temp / 10;
             chars[i + maxLength - length + 1] = (char) (temp % 10 + '0');
@@ -49,8 +47,9 @@ public class Q43 {
                 temp = (chars2[i] - '0') + flag;
             }
             flag = temp / 10;
-            chars[i] = (char) (temp % 10 + '0');
+            chars[i + 1] = (char) (temp % 10 + '0');
         }
+        chars[0] = (char) (flag % 10 + '0');
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < chars.length; i++) {
             if (i == 0 && chars[i] == '0') {
