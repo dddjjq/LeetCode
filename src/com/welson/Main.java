@@ -4,13 +4,15 @@ import com.welson.part1.ListNode;
 import com.welson.part2.Q41;
 import com.welson.part2.Q42;
 import com.welson.part2.Q43;
+import com.welson.tree.Q94;
+import com.welson.tree.TreeNodeFactory;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q43 q38 = new Q43();
+        Q94 q38 = new Q94();
         int[] temp = new int[]{4,2,0,3,2,5};
-        System.out.println(q38.multiply("123","200"));
+        System.out.println(q38.inorderTraversal(TreeNodeFactory.createNormalTreeNode()));
     }
 
     public static ListNode createListNode() {
