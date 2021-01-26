@@ -2,14 +2,15 @@ package com.welson;
 
 import com.welson.part1.ListNode;
 import com.welson.part1.Q674;
+import com.welson.part2.Q46;
 import com.welson.tree.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q674 q38 = new Q674();
-        int[] temp = new int[]{4, 2, 0, 3, 2, 5};
-        System.out.println(q38.findLengthOfLCIS(new int[]{2,2,2,2,2}));
+        Q46 q38 = new Q46();
+        int[] temp = new int[]{1,2,3};
+        System.out.println(q38.permute(temp));
     }
 
     public static ListNode createListNode() {
