@@ -6,63 +6,60 @@ import java.util.List;
 public class Q51 {
 
     private final List<List<String>> result = new ArrayList<>();
-    private final List<String> list = new ArrayList<>();
+    private char[][] chars;
 
     public List<List<String>> solveNQueens(int n) {
-        dfs(n, 0);
+        chars = new char[n][n];
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = 0; j < chars.length; j++) {
+                chars[i][j] = '.';
+            }
+        }
+        dfs2(n, 0);
         return result;
     }
 
-    public void dfs(int n, int index) {
-        if (list.size() == n) {
-            result.add(new ArrayList<>(list));
+    public void dfs2(int n, int row) {
+        if (row == n) {
+            addToList();
             return;
         }
-        for (int i = index; i < n; i++) {
-            if (!isValid(i)) {
+        for (int col = 0; col < n; col++) {
+            if (!isValid(row, col)) {
                 continue;
             }
-            list.add(getLine(i, n));
-            dfs(n, index);
-            list.remove(list.size() - 1);
+            chars[row][col] = 'Q';
+            dfs2(n, row + 1);
+            chars[row][col] = '.';
         }
     }
 
-    public boolean isValid(int index) {
-        if (list.isEmpty()) {
-            return true;
+    public void addToList() {
+        List<String> strings = new ArrayList<>();
+        for (int i = 0; i < chars.length; i++) {
+            strings.add(new String(chars[i]));
         }
-        int preLine = 0;
-        for (String s : list) {
-            int preIndex = 0;
-            char[] chars = s.toCharArray();
-            for (int i = 0; i < chars.length; i++) {
-                if (chars[i] == 'Q') {
-                    preIndex = i;
-                }
-            }
-            if (index == preIndex) {
+        result.add(strings);
+    }
+
+    public boolean isValid(int row, int col) {
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i][col] == 'Q') {
                 return false;
             }
-            if (Math.abs(preLine - index) == 1) {
-                if (Math.abs(preIndex - index) <= 1) {
-                    return false;
-                }
+        }
+        for (int i = row - 1, j = col + 1; i >= 0 && j < chars.length;
+             i--, j++) {
+            if (chars[i][j] == 'Q') {
+                return false;
             }
-            preLine++;
+        }
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0;
+             i--, j--) {
+            if (chars[i][j] == 'Q') {
+                return false;
+            }
         }
         return true;
-    }
-
-    public String getLine(int index, int n) {
-        char[] chars = new char[n];
-        for (int i = 0; i < n; i++) {
-            if (i == index) {
-                chars[i] = 'Q';
-            } else {
-                chars[i] = '.';
-            }
-        }
-        return new String(chars);
     }
 }
