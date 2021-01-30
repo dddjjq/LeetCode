@@ -2,13 +2,13 @@ package com.welson;
 
 import com.welson.part1.ListNode;
 import com.welson.part2.Q51;
+import com.welson.part2.Q53;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q51 q38 = new Q51();
-        int[] temp = new int[]{1, 1, 1, 1, 3};
-        System.out.println(q38.solveNQueens(8).size());
+        Q53 q38 = new Q53();
+        System.out.println(q38.maxSubArray(new int[]{-1,-2}));
     }
 
     public static ListNode createListNode() {
