@@ -1,15 +1,19 @@
 package com.welson;
 
 import com.welson.part1.ListNode;
-import com.welson.part2.Q51;
-import com.welson.part2.Q53;
+import com.welson.part2.Q438;
+import com.welson.part2.Q76;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q53 q38 = new Q53();
-        System.out.println(q38.maxSubArray(new int[]{-1,-2}));
+        Q438 q38 = new Q438();
+        //"ADOBECODEBANC"
+        //"ABC"
+        int[][] arr = new int[][]{{1,2,3},{4,5,6},{7,8,9}};
+        System.out.println(q38.findAnagrams("cbaebabacd","abc"));
     }
+
 
     public static ListNode createListNode() {
         ListNode listNode = new ListNode(1);
