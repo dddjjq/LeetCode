@@ -1,17 +1,19 @@
 package com.welson;
 
 import com.welson.part1.ListNode;
-import com.welson.part2.Q438;
-import com.welson.part2.Q76;
+import com.welson.part1.Q6;
+import com.welson.part2.*;
+
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q438 q38 = new Q438();
+        Q64 q38 = new Q64();
         //"ADOBECODEBANC"
         //"ABC"
-        int[][] arr = new int[][]{{1,2,3},{4,5,6},{7,8,9}};
-        System.out.println(q38.findAnagrams("cbaebabacd","abc"));
+        int[][] arr = new int[][]{{1,3,1},{1,5,1},{4,2,1}};
+        System.out.println(q38.minPathSum(arr));
     }
 
 
