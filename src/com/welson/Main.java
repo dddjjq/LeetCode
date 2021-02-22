@@ -1,19 +1,16 @@
 package com.welson;
 
 import com.welson.part1.ListNode;
-import com.welson.part1.Q6;
 import com.welson.part2.*;
-
-import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q64 q38 = new Q64();
+        Q72 q38 = new Q72();
         //"ADOBECODEBANC"
         //"ABC"
-        int[][] arr = new int[][]{{1,3,1},{1,5,1},{4,2,1}};
-        System.out.println(q38.minPathSum(arr));
+        int[][] arr = new int[][]{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
+        System.out.println(q38.minDistance("horse","ros"));
     }
 
 
