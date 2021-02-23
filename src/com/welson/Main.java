@@ -1,19 +1,17 @@
 package com.welson;
 
 import com.welson.part1.ListNode;
-import com.welson.part1.Q6;
-import com.welson.part2.*;
+import com.welson.sort.*;
 
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q64 q38 = new Q64();
-        //"ADOBECODEBANC"
-        //"ABC"
-        int[][] arr = new int[][]{{1,3,1},{1,5,1},{4,2,1}};
-        System.out.println(q38.minPathSum(arr));
+        ISort sort = new Heap();
+        int[] arr = new int[]{2, 6, 4, 5, 3, 1, 8, 6, 9, 9, 10, 15, 9, 7};
+        sort.sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 
