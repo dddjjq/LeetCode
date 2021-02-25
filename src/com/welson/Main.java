@@ -3,13 +3,14 @@ package com.welson;
 import com.welson.part1.ListNode;
 import com.welson.sort.*;
 import com.welson.sword.Q4;
+import com.welson.sword.Q7;
 
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q4 sort = new Q4();
+        Q7 sort = new Q7();
         int[][] arr = new int[][]{
                 {1,4,7,11,15},
                 {2,5,8,12,19},
@@ -17,7 +18,7 @@ public class Main {
                 {10,13,14,17,24},
                 {18,21,23,26,30}
         };
-        System.out.println(sort.findNumberIn2DArray(arr,40));
+        System.out.println(sort.buildTree(new int[]{3,9,20,15,7},new int[]{9,3,15,20,7}));
     }
 
 
