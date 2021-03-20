@@ -2,6 +2,8 @@ package com.welson;
 
 import com.welson.part1.ListNode;
 import com.welson.sort.*;
+import com.welson.sword.Q10;
+import com.welson.sword.Q11;
 import com.welson.sword.Q4;
 import com.welson.sword.Q7;
 
@@ -10,7 +12,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Q7 sort = new Q7();
+        Q11 sort = new Q11();
         int[][] arr = new int[][]{
                 {1,4,7,11,15},
                 {2,5,8,12,19},
@@ -18,7 +20,7 @@ public class Main {
                 {10,13,14,17,24},
                 {18,21,23,26,30}
         };
-        System.out.println(sort.buildTree(new int[]{3,9,20,15,7},new int[]{9,3,15,20,7}));
+        System.out.println(sort.minArray(new int[]{1,1,1,0,1}));
     }
 
 
