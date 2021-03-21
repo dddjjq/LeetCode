@@ -1,26 +1,22 @@
 package com.welson;
 
 import com.welson.part1.ListNode;
-import com.welson.sort.*;
-import com.welson.sword.Q10;
-import com.welson.sword.Q11;
-import com.welson.sword.Q4;
-import com.welson.sword.Q7;
-
-import java.util.Arrays;
+import com.welson.part2.Q79;
+import com.welson.part2.Q80;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q11 sort = new Q11();
-        int[][] arr = new int[][]{
-                {1,4,7,11,15},
-                {2,5,8,12,19},
-                {3,6,9,16,22},
-                {10,13,14,17,24},
-                {18,21,23,26,30}
+        Q80 q79 = new Q80();
+        char[][] board = new char[][]{
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}
         };
-        System.out.println(sort.minArray(new int[]{1,1,1,0,1}));
+        char[][] test = new char[][]{
+                {'a', 'b'}
+        };
+        System.out.println(q79.removeDuplicates(new int[]{0,0,1,1,1,1,2,2,3,3,3}));
     }
 
 
