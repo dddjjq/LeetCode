@@ -3,11 +3,12 @@ package com.welson;
 import com.welson.part1.ListNode;
 import com.welson.part2.Q79;
 import com.welson.part2.Q80;
+import com.welson.part2.Q81;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q80 q79 = new Q80();
+        Q81 q79 = new Q81();
         char[][] board = new char[][]{
                 {'A', 'B', 'C', 'E'},
                 {'S', 'F', 'C', 'S'},
@@ -16,7 +17,7 @@ public class Main {
         char[][] test = new char[][]{
                 {'a', 'b'}
         };
-        System.out.println(q79.removeDuplicates(new int[]{0,0,1,1,1,1,2,2,3,3,3}));
+        System.out.println(q79.search(new int[]{2,5,6,0,0,1,2},2));
     }
 
 

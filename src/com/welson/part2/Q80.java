@@ -1,32 +1,28 @@
 package com.welson.part2;
 
-import java.util.Arrays;
-
 /**
  * 80. 删除排序数组中的重复项 II
  */
 public class Q80 {
     public int removeDuplicates(int[] nums) {
         int start = 0;
-        int end = 0;
+        int end = 1;
         int len = nums.length;
         int count = 0;
         while (end < len) {
             if (nums[end] == nums[start]) {
-                end++;
                 count++;
-                if (count == 2) {
-                    swap(nums, start, end);
-                } else {
+                if (count < 2) {
                     start++;
+                    swap(nums,start,end);
                 }
             } else {
+                count = 0;
                 start++;
-                count = 1;
-                end++;
+                swap(nums, start, end);
             }
+            end++;
         }
-        System.out.println(Arrays.toString(nums));
         return start + 1;
     }
 
