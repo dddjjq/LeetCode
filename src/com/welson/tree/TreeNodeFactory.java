@@ -70,6 +70,24 @@ public class TreeNodeFactory {
         return t3;
     }
 
+    public static TreeNode create5() {
+        TreeNode t21 = new TreeNode(1);
+        TreeNode t22 = new TreeNode(2);
+        TreeNode t24 = new TreeNode(4);
+        t22.left = t21;
+        t22.right = t24;
+        return t22;
+    }
+
+    public static TreeNode create6() {
+        TreeNode t1 = new TreeNode(0);
+        TreeNode t21 = new TreeNode(1);
+        TreeNode t23 = new TreeNode(3);
+        t21.left = t1;
+        t21.right = t23;
+        return t21;
+    }
+
     public static void reset() {
         t1.left = null;
         t2.left = null;
