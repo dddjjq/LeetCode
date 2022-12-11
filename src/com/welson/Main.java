@@ -2,20 +2,19 @@ package com.welson;
 
 import com.welson.part1.ListNode;
 import com.welson.part2.Q82;
+import com.welson.part3.Q1775;
+import com.welson.part3.Q88;
+
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q82 q79 = new Q82();
-        char[][] board = new char[][]{
-                {'A', 'B', 'C', 'E'},
-                {'S', 'F', 'C', 'S'},
-                {'A', 'D', 'E', 'E'}
-        };
-        char[][] test = new char[][]{
-                {'a', 'b'}
-        };
-        System.out.println(q79.deleteDuplicates(createListNode()));
+        Q88 q88 = new Q88();
+        int[] num1 = new int[]{2,0};
+        int[] num2 = new int[]{1};
+        q88.merge(num1,1, num2,1);
+        System.out.println(Arrays.toString(num1));
     }
 
 
