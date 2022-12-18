@@ -2,7 +2,9 @@ package com.welson;
 
 import com.welson.part1.ListNode;
 import com.welson.part2.Q82;
+import com.welson.part3.Q1764;
 import com.welson.part3.Q1775;
+import com.welson.part3.Q1827;
 import com.welson.part3.Q88;
 
 import java.util.Arrays;
@@ -10,11 +12,13 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Q88 q88 = new Q88();
-        int[] num1 = new int[]{2,0};
-        int[] num2 = new int[]{1};
-        q88.merge(num1,1, num2,1);
-        System.out.println(Arrays.toString(num1));
+        Q1764 q1764 = new Q1764();
+        int[][] group = new int[][]{
+                {10, -2, 1},
+                {1, 2, 3, 4}
+        };
+        int[] nums = new int[]{10, -2,  1, 2, 3, 4};
+        System.out.println(q1764.canChoose(group, nums));
     }
 
 
