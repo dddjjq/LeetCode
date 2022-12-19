@@ -1,6 +1,8 @@
 package com.welson;
 
 import com.welson.part1.ListNode;
+import com.welson.part2.Q1971;
+import com.welson.part2.Q1971_2;
 import com.welson.part2.Q82;
 import com.welson.part3.Q1764;
 import com.welson.part3.Q1775;
@@ -12,13 +14,20 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Q1764 q1764 = new Q1764();
+        Q1971_2 q1971 = new Q1971_2();
         int[][] group = new int[][]{
-                {10, -2, 1},
-                {1, 2, 3, 4}
+                {4, 3},
+                {1, 4},
+                {4, 8},
+                {1, 7},
+                {6, 4},
+                {4, 2},
+                {7, 4},
+                {4, 0},
+                {0, 9},
+                {5, 4},
         };
-        int[] nums = new int[]{10, -2,  1, 2, 3, 4};
-        System.out.println(q1764.canChoose(group, nums));
+        System.out.println(q1971.validPath(10, group, 5, 10));
     }
 
 
