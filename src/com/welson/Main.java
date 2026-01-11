@@ -7,27 +7,18 @@ import com.welson.part2.Q82;
 import com.welson.part3.Q1764;
 import com.welson.part3.Q1775;
 import com.welson.part3.Q1827;
-import com.welson.part3.Q88;
+import com.welson.y26.p150.Q88;
 
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q1971_2 q1971 = new Q1971_2();
-        int[][] group = new int[][]{
-                {4, 3},
-                {1, 4},
-                {4, 8},
-                {1, 7},
-                {6, 4},
-                {4, 2},
-                {7, 4},
-                {4, 0},
-                {0, 9},
-                {5, 4},
-        };
-        System.out.println(q1971.validPath(10, group, 5, 10));
+        Q88 q88 = new Q88();
+        int[] nums1 = new int[]{1, 2, 3, 0, 0, 0};
+        int[] nums2 = new int[]{2, 5, 6};
+        q88.merge(nums1, 3, nums2, 3);
+        System.out.println(Arrays.toString(nums1));
     }
 
 
