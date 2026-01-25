@@ -7,17 +7,16 @@ import com.welson.part2.Q82;
 import com.welson.part3.Q1764;
 import com.welson.part3.Q1775;
 import com.welson.part3.Q1827;
-import com.welson.y26.p150.Q88;
+import com.welson.y26.p150.*;
 
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Q88 q88 = new Q88();
-        int[] nums1 = new int[]{1, 2, 3, 0, 0, 0};
-        int[] nums2 = new int[]{2, 5, 6};
-        q88.merge(nums1, 3, nums2, 3);
+        Q209 q88 = new Q209();
+        int[] nums1 = new int[]{1,2,3,4,5};
+        System.out.println(q88.minSubArrayLen(15,nums1));
         System.out.println(Arrays.toString(nums1));
     }
 
