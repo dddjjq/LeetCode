@@ -14,10 +14,12 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Q209 q88 = new Q209();
+        ListNode node  = createListNode2();
+        Q92 q2 = new Q92();
         int[] nums1 = new int[]{1,2,3,4,5};
-        System.out.println(q88.minSubArrayLen(15,nums1));
-        System.out.println(Arrays.toString(nums1));
+        ListNode node2 = createListNode3();
+        System.out.println(q2.reverseBetween(node2,2,3));
+//        System.out.println(Arrays.toString(nums1));
     }
 
 
@@ -29,6 +31,18 @@ public class Main {
         listNode.next.next.next.next = new ListNode(4);
         listNode.next.next.next.next.next = new ListNode(4);
         listNode.next.next.next.next.next.next = new ListNode(5);
+        return listNode;
+    }
+
+    public static ListNode createListNode2() {
+        ListNode listNode = new ListNode(3);
+        return listNode;
+    }
+
+    public static ListNode createListNode3() {
+        ListNode listNode = new ListNode(5);
+        listNode.next = new ListNode(6);
+        listNode.next.next = new ListNode(4);
         return listNode;
     }
 }
