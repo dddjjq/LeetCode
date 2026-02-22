@@ -14,10 +14,9 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Q209 q88 = new Q209();
-        int[] nums1 = new int[]{1,2,3,4,5};
-        System.out.println(q88.minSubArrayLen(15,nums1));
-        System.out.println(Arrays.toString(nums1));
+        Q135 q88 = new Q135();
+        int[] nums1 = new int[]{1,0,2};
+        System.out.println(q88.candy(nums1));
     }
 
 

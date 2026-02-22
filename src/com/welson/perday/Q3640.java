@@ -16,5 +16,6 @@ public class Q3640 {
 
             i++;
         }
+        return 0;
     }
 }
