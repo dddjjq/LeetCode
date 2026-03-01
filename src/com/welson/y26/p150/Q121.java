@@ -1,7 +1,5 @@
 package com.welson.y26.p150;
 
-import sun.nio.cs.ext.MacHebrew;
-
 public class Q121 {
     public int maxProfit(int[] prices) {
         int res = 0;
