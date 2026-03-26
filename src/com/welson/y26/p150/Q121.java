@@ -1,5 +1,6 @@
 package com.welson.y26.p150;
 
+
 public class Q121 {
     public int maxProfit(int[] prices) {
         int res = 0;
